@@ -121,7 +121,37 @@ class WhatsAppController{
 
             let formData = new FormData(this.el.formPanelAddContact);
 
-        })
+        });
+
+
+        this.el.contactsMessagesList.querySelectorAll('.contact-item').forEach(item=>{
+            console.log(1);
+            item.on('click', e=>{
+                this.el.home.hide();
+                this.el.main.css({
+                    display: 'flex'
+                });
+            });
+        });
+
+
+        this.el.btnAttach.on('click', e=>{
+            this.el.menuAttach.addClass('open');
+        });
+
+        this.el.btnAttachPhoto.on('click', e=>{
+            console.log('photo');
+        });
+        this.el.btnAttachCamera.on('click', e=>{
+            console.log('photo');
+        });
+        this.el.btnAttachDocument.on('click', e=>{
+            console.log('photo');
+        });
+        this.el.btnAttachContact.on('click', e=>{
+            console.log('photo');
+        });
+
 
 
 
